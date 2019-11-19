@@ -1,4 +1,4 @@
-import map from 'lodash/map';
+import _ from 'lodash';
 import $ from 'jquery';
 import { isSelect } from 'dom-element-types';
 import { getNumber, getNumbersUntil } from './helpers/number-helpers';
@@ -68,7 +68,7 @@ function reviewCommand({ rootElement, commandName, selectedElement }) {
 }
 
 function getValues(el) {
-  return map(el.querySelectorAll('option'), option => ({
+  return _.map(el.querySelectorAll('option'), option => ({
     label: option.innerText,
     selected: option.selected,
     value: option.value,

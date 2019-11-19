@@ -5,20 +5,21 @@ module.exports = {
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'handsfree-core-modules.js',
-    library: 'handsfreeCoreModules',
+    filename: 'handsfree-for-website-modules.js',
+    library: 'handsfreeForWebsiteModules',
     libraryTarget: 'umd',
   },
-  devtool: 'inline-source-map',
-  devServer: {
-    https: true,
-    contentBase: './dist',
-  },
+  devtool: 'source-map',
   module: {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
     }],
+  },
+  externals: {
+    lodash: 'lodash',
+    moment: 'moment',
+    jquery: 'jquery',
   },
 };

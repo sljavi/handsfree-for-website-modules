@@ -1,11 +1,11 @@
-import isElement from 'lodash/isElement';
+import _ from 'lodash';
 
 let foundOne = false;
 
 function find(text, previousIndex) {
   const found = window.find(text, false, previousIndex);
   if (found) {
-    if (isElement(window.getSelection().anchorNode)) {
+    if (_.isElement(window.getSelection().anchorNode)) {
       find(text, previous);
     } else {
       foundOne = true;

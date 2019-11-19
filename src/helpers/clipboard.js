@@ -1,4 +1,4 @@
-import isElement from 'lodash/isElement';
+import _ from 'lodash';
 import $ from 'jquery';
 
 function copyElement(el) {
@@ -19,7 +19,7 @@ function copyString(text) {
 }
 
 export function copy(something) {
-  if (isElement(something)) {
+  if (_.isElement(something)) {
     return copyElement(something);
   }
   return copyString(something);

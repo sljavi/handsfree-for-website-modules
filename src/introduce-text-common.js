@@ -1,4 +1,4 @@
-import defer from 'lodash/defer';
+import _ from 'lodash';
 import { exit as defaultExit } from './global';
 
 function updateNodeElementText(text, element) {
@@ -129,7 +129,7 @@ function deleteText(text, element) {
 }
 
 export function exit(params) {
-  defer(() => params.selectedElement.blur());
+  _.defer(() => params.selectedElement.blur());
   return {
     ...defaultExit({
       contextState: params.contextState,

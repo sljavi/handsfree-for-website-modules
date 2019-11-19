@@ -1,4 +1,4 @@
-import sortBy from 'lodash/sortBy';
+import _ from 'lodash';
 
 const langList = [{
   value: 'af-ZA',
@@ -359,4 +359,4 @@ const langList = [{
   name: 'Chinese, Mandarin (Simplified, China)',
 }];
 
-export const langs = sortBy(langList, 'name');
+export const langs = _.sortBy(langList, 'name');

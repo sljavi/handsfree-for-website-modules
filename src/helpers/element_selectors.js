@@ -1,25 +1,21 @@
-import pick from 'lodash/pick';
-import omit from 'lodash/omit';
-import some from 'lodash/some';
-import isArray from 'lodash/isArray';
-import reduce from 'lodash/reduce';
+import _ from 'lodash';
 import { getAllElementTypes } from 'dom-element-types';
 
-export const clickableSelector = omit(getAllElementTypes(), ['text']);
+export const clickableSelector = _.omit(getAllElementTypes(), ['text']);
 clickableSelector.text = clickableSelector.textInput;
 delete clickableSelector.textInput;
 
-export const focusableElementAfterClickSelector = pick(clickableSelector, [
+export const focusableElementAfterClickSelector = _.pick(clickableSelector, [
   'audio', 'checkbox', 'color', 'datePicker', 'file', 'media', 'range', 'radio', 'select', 'text',
 ]);
 
-export const selectableSelectors = pick(getAllElementTypes(), [
+export const selectableSelectors = _.pick(getAllElementTypes(), [
   'audio', 'image', 'link', 'media', 'text', 'video',
 ]);
 
 export function is(selectors, el) {
-  return some(selectors, (selector) => {
-    if (isArray(selector)) {
+  return _.some(selectors, (selector) => {
+    if (_.isArray(selector)) {
       return is(selector, el);
     }
     return el.matches(selector);
@@ -27,7 +23,7 @@ export function is(selectors, el) {
 }
 
 export function getQuerySelectorFor(selectors) {
-  return reduce(selectors, (all, selector) => all.push(selector) && all, []).join(', ');
+  return _.reduce(selectors, (all, selector) => all.push(selector) && all, []).join(', ');
 }
 
 export function getClickableSelector(filter) {

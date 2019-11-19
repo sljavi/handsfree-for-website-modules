@@ -4,8 +4,10 @@ module.exports = {
     browser: true,
     node: true,
     amd: true,
-    es6: true
+    es6: true,
+    'jest/globals': true,
   },
+  plugins: ['jest'],
   extends: [
     'airbnb-base',
   ],
@@ -14,6 +16,7 @@ module.exports = {
     'prefer-destructuring': ['off'],
     'no-console': ['off'],
     'no-unused-vars': ['error', {'args': 'none'}],
-    'no-use-before-define': ['off']
+    'no-use-before-define': ['off'],
+    'consistent-return': ['off']
   }
 };

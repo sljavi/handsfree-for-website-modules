@@ -1,4 +1,4 @@
-import wrap from 'lodash/wrap';
+import _ from 'lodash';
 import { isTimePicker } from 'dom-element-types';
 import moment from 'moment';
 import { getNumber, getNumbersUntil } from './helpers/number-helpers';
@@ -14,11 +14,11 @@ import {
 const reviewCommandActions = {
   hour: {
     condition: validateHour,
-    action: wrap(setHour, setDate),
+    action: _.wrap(setHour, setDate),
   },
   minutes: {
     condition: validateMinutes,
-    action: wrap(setMinutes, setDate),
+    action: _.wrap(setMinutes, setDate),
   },
 };
 

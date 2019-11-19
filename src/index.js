@@ -12,9 +12,11 @@ import linkOptions from './link-options';
 import mediaOptions from './media-options';
 import monthOptions from './month-options';
 import navigation from './navigation';
+import open from './open';
 import pickLabel from './pick-label';
 import rangeOptions from './range-options';
 import scroll from './scroll';
+import search from './search';
 import select from './select';
 import selectOptions from './select-options';
 import textOptions from './text-options';
@@ -37,7 +39,9 @@ const coreModules = [
   monthOptions,
   navigation,
   pickLabel,
+  open,
   rangeOptions,
+  search,
   scroll,
   select,
   selectOptions,

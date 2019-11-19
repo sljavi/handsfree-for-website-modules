@@ -1,8 +1,8 @@
-import some from 'lodash/some';
+import _ from 'lodash';
 import { clickableSelector } from './element_selectors';
 
 export default function focusElement(el) {
-  if (some(clickableSelector.text, selector => el.matches(selector))) {
+  if (_.some(clickableSelector.text, selector => el.matches(selector))) {
     if (el.value && el.value.length) {
       const valueLength = el.value.length;
       if (el.setSelectionRange) {
