@@ -284,3 +284,37 @@ This module supports two languages, English and Spanish, for both of them, it de
 When a name starts with `i18n-`, the tool will try to translate it by searching what is after of `i18n-` inside the `i18n` map. At a given moment there is always an active language, most of the time is the one selected by the user or as fallback the browser language.
 
 There are two `i18n` objects, one is at the module level and the other at the context level. When translating the `name` and `description` of the module, the first map is used, when translating the command names, help or group properties the second one is used. Translations defined at the module level are not available at the context level.
+
+#### Reference
+
+##### Module
+
+| Property | Value Type | Required | Description                                |
+|----------|------------|----------|--------------------------------------------|
+| name     | string     | yes      | Used for naming and identification         |
+| description | string | yes | Used on module descriptions |
+| icon | string | no | Used for module identification when the UI is compact. Icon example `fa fa-search`. See [font awesome icons](https://fontawesome.com/icons?d=gallery) for reference. |
+| contexts | array | yes | List of module's contexts. See following table for reference |
+| i18n | object | no | Language map that will be used to translate the values provided by `name` and `description` if they start with `'i18n-'`. |
+
+
+#### Context
+
+| Property | Value Type | Required | Description                                |
+|----------|------------|----------|--------------------------------------------|
+| context  | string     | yes      | Used for identification         |
+| name | string | yes | Used for naming |
+| setup | function | no | Executed when the context gets active |
+| teardown | function | no | Executed when the context is not longer active |
+| htmlExample | string | no | A relevant piece of html that can be useful for targeting the voice commands defined into the context. i.e. if the context adds voice commands for a video player, the the value of this property would be a video player definition. |
+| commands | array | no | Command list of the context. It isn't required because a context could be defined for extending a previous defined context with the same `context` name. |
+| i18n | object | no | Language map that will be used to translate the values provided by `name`, `htmlExample` and the texts defined inside of `commands`|
+
+##### Command
+
+| Property | Value Type | Required | Description                                |
+|----------|------------|----------|--------------------------------------------|
+| name  | string | yes | Command identification |
+| action | function | yes | The function that will be executed when the user says the given `name` |
+| help | string | yes | A description of the command. |
+| group | string | no | A category name that could be useful for command grouping |
