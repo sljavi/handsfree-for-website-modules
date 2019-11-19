@@ -22,14 +22,14 @@ git clone git@github.com:sljavi/handsfree-for-website-modules.git
 ```
 
 #### Extending an existing module
-You can add a new voice command or modify an existing one just by editing the code of an already defined module, check the [src folder](https://github.com/sljavi/handsfree-for-website-modules/tree/master/src), you will find there the list of existing modules. If you don't know how to implement a voice command, keep reading this guide.
+You can add a new voice command or modify an existing one just by editing the code of an already defined module, the modules can be reviewed looking by the [src folder](https://github.com/sljavi/handsfree-for-website-modules/tree/master/src). If you don't know how to implement a voice command, keep reading this guide.
 
 #### Create a new module
 
 In order to successfully add a module of voice commands, I recommend you first take a look at the existing modules and look for similar behaviors you can take as an example.
 
 In order to propose a new voice command module you should:
- - Implement the module inside src folder
+ - Implement the module inside the [src folder](https://github.com/sljavi/handsfree-for-website-modules/tree/master/src)
  - Load the module in [src/index.js](https://github.com/sljavi/handsfree-for-website-modules/tree/master/src/index.js) and add it to the list of modules
  - [Optionally] Add some tests
  - [Optionally] Write some docs
@@ -44,7 +44,7 @@ A module is an object that defines contexts and commands. Let’s bring some sho
 ##### Modules
 A module is just a wrapper of contexts and commands, in addition to them, it also defines a `name`, a `description` and an `icon`. Let's see a code example.
 
-```
+```javascript
 const myModule = {
     name: 'Module name',
     description: 'My first module',
@@ -57,13 +57,13 @@ const myModule = {
 The `icon` is defined as a css class. See [font awesome icons](https://fontawesome.com/icons?d=gallery) for reference.
 
 ##### Contexts
-At any moment there is always only one active context, the user will be able to call for voice commands that are defined for that context. The main context is called `root`, most of the actions are defined for that context. e.g. `scroll down`, `click` and `select`.
+At any moment there is always only one active context, the user can call for voice commands that are defined for that context. The main context is called `root`, most of the actions are defined for it. e.g. `scroll down`, `click` and `select`.
 
-In addition to the `root` context, there is another special context called `global`. Any action defined inside of it will automatically be available for any context. The voice commands `help` and `exit` are defined under the `global` context. These voice commands are always available, but the global context is never active, it only extends the active context.
+In addition to the `root` context, there is another special context called `global`. Any action defined inside of it will automatically be available for any context. The voice commands `help` and `exit` are defined under the `global` context. These voice commands are always available, but the global context is never active, it's used exclusively for extending the active context.
 
 A module can define new contexts or extend existing ones, let's see a code example
 
-```
+```javascript
 const myModule = {
     name: 'Module name',
     description: 'My first module',
@@ -93,7 +93,7 @@ In this code example we've defined a new module that extends two existing contex
 
 In addition to the command list there are two hooks that can be defined within a context, their name are `setup` and `teardown`, as you might guess, the `setup` function is executed every time the context gets active, and the `teardown` function when the user leaves the context, let's see a code example.
 
-```
+```javascript
 const myModule = {
     name: 'Module name',
     description: 'My first module',
@@ -114,9 +114,9 @@ const myModule = {
 ```
 
 ##### Commands
-A voice command is a pair of two important things, a name and an action. When the name is invoked the action is executed. Let's enter into the details, what's a name? It basically is a string, could be one or more words. e.g. 'click', 'scroll down', '7', 'number 7'. And what about the actions? they're functions that will be executed automatically as soon as their name are invoked, let's see a code example.
+A voice command is a pair of two important things, a name and an action. When the name is invoked the action is executed. Let's enter into the details, what's a name for this tool? It basically is a string, could be one or more words. e.g. 'click', 'scroll down', '7', 'number 7'. And what about the actions? they're functions that will be executed automatically as soon as their name are invoked, let's see a code example.
 
-```
+```javascript
 const myModule = {
     name: 'Module name',
     description: 'My first module',
@@ -139,7 +139,7 @@ This module defines a new context with only a single command, but more can be ad
 
 Sometimes we can't define all the supported commands by extension, let's imagine we want to support the voice command `open <website name here>`. There is no way to define a command for each website that exists in the entire web. In these cases we can define a command with the name `'*'`. It basically tells to the library, if there is no other better command for what the user has said, give it to me, I'll handle it. Let's see a code example that describes how to use it.
 
-```
+```javascript
 const myModule = {
     name: 'Module name',
     description: 'My first module',
@@ -166,11 +166,11 @@ const myModule = {
     }]
 }
 ```
-The example defines two commands, if the user only says "open", we'll request him to say "open <website name>". In case he says "open" and something else, the command takes what is after the word "open" and redirect the tab to it. 
+The example defines two commands, if the user only says "open", we'll request him to say "open {website name}". In case he says "open" and something else, the command takes what is after the word "open" and redirect the tab to it. 
 
 You might have noticed that at the end of the `if`, the function returns the object. 
 
-```
+```javascript
 {commandWasExecuted: true}
 ```
 This is useful to tell the library that the voice command was executed successfully, otherwise, it will show an error alert saying that there is no voice command for what was mentioned.
@@ -182,16 +182,16 @@ Note: The open website command is just an example. It cannot be considered as pr
 When the voice command is invoked by the user, the action function is executed with some useful parameters:
  - `rootElement`: DOM element that wraps the library UI
  - `selectedElement`: DOM element selected by a previous command. i.e. after executing a click
-- `contextState`: An object that is received and can be updated within every execution of an action
+ - `contextState`: An object that is received and can be updated within every execution of an action
  - `showHelp`: A boolean value, it tells to the library if it should show the help modal
  - `showHelpBar`: A boolean value, it tells to the library if it should show the help bar
  - `commandName`: A string that represents what the user has said
- - `spokenCommands`: The list of possible strings that the user has said. `commandName`is the most probably.
+ - `spokenCommands`: The list of possible strings that the user has said. `commandName` points to the most probably.
  - `tools`: An object of libraries and helpers that can be useful to use. So far the included libraries are `jQuery`, `moment`, `domElementTypes`, `lodash` and `scroll`.
  
-Some of these values can be edited when executing an action, to do so, an object with the new edited value must be returned by the function. Let's see a code example.
+Some of these values can be edited when executing an action in order to tell something to the library or to receive an updated context state, to do so, an object with the new edited value must be returned by the function. Let's see a code example.
 
-```
+```javascript
 const myModule = {
     name: 'Module name',
     description: 'My first module',
@@ -245,7 +245,7 @@ In addition to the `name` and the `action`, a command can also define `help` and
 
 Modules and commands can be defined for multiple languages, at this moment all the voice commands of this repository are translated to English, Spanish and Portuguese. There is no official language or language by default when starting to define commands, you can define them using words or numbers of any language. Let's see how it looks an internationalized module.
 
-```
+```javascript
 const myModule = {
     name: 'i18n-module-name',
     description: 'i18n-module-description',
@@ -283,4 +283,4 @@ This module supports two languages, English and Spanish, for both of them, it de
 
 When a name starts with `i18n-`, the tool will try to translate it by searching what is after of `i18n-` inside the `i18n` map. At a given moment there is always an active language, most of the time is the one selected by the user or as fallback the browser language.
 
-There are two `18n` objects, one is at the module level and the other at the context level. When translating the `name` and `description` of the module, the first map is used, when translating the command names the second one is used. Translations defined at the module level are not available at the context level.
+There are two `i18n` objects, one is at the module level and the other at the context level. When translating the `name` and `description` of the module, the first map is used, when translating the command names, help or group properties the second one is used. Translations defined at the module level are not available at the context level.
