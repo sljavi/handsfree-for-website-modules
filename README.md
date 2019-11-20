@@ -285,9 +285,9 @@ When a name starts with `i18n-`, the tool will try to translate it by searching 
 
 There are two `i18n` objects, one is at the module level and the other at the context level. When translating the `name` and `description` of the module, the first map is used, when translating the command names, help or group properties the second one is used. Translations defined at the module level are not available at the context level.
 
-### Reference
+## Reference
 
-#### Module
+### Module
 
 | Property | Value Type | Required | Description                                |
 |----------|------------|----------|--------------------------------------------|
@@ -298,7 +298,7 @@ There are two `i18n` objects, one is at the module level and the other at the co
 | i18n | object | no | Language map that will be used to translate the values provided by `name` and `description` if they start with `'i18n-'`. |
 
 
-#### Context
+### Context
 
 | Property | Value Type | Required | Description                                |
 |----------|------------|----------|--------------------------------------------|
@@ -310,7 +310,7 @@ There are two `i18n` objects, one is at the module level and the other at the co
 | commands | array | no | Command list of the context. It isn't required because a context could be defined for extending a previous defined context with the same `context` name. |
 | i18n | object | no | Language map that will be used to translate the values provided by `name`, `htmlExample` and the texts defined inside of `commands`|
 
-#### Command
+### Command
 
 | Property | Value Type | Required | Description                                |
 |----------|------------|----------|--------------------------------------------|
