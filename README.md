@@ -11,7 +11,7 @@ If you know how to code in javascript, I recommend you start by reading the deve
 If you don't know how to code a module, or you have some doubts, post an issue requesting more information or suggesting the new voice commands.
 
 ## Development
-##### Project requirements
+#### Project requirements
  - Git
  - Node >= 10
  - NPM >= 6
@@ -21,10 +21,10 @@ Install it locally by executing the following command
 git clone git@github.com:sljavi/handsfree-for-website-modules.git
 ```
 
-#### Extending an existing module
+### Extending an existing module
 You can add a new voice command or modify an existing one just by editing the code of an already defined module, the modules can be reviewed looking by the [src folder](https://github.com/sljavi/handsfree-for-website-modules/tree/master/src). If you don't know how to implement a voice command, keep reading this guide.
 
-#### Create a new module
+### Create a new module
 
 In order to successfully add a module of voice commands, I recommend you first take a look at the existing modules and look for similar behaviors you can take as an example.
 
@@ -34,14 +34,14 @@ In order to propose a new voice command module you should:
  - [Optionally] Add some tests
  - [Optionally] Write some docs
 
-#### Module specification
+### Module specification
 
 A module is an object that defines contexts and commands. Let’s bring some short definitions:
  - Module: Group of contexts
  - Context: Group of commands
  - Commands: A function that is executed when its name is invoked
 
-##### Modules
+#### Modules
 A module is just a wrapper of contexts and commands, in addition to them, it also defines a `name`, a `description` and an `icon`. Let's see a code example.
 
 ```javascript
@@ -56,7 +56,7 @@ const myModule = {
 ```
 The `icon` is defined as a css class. See [font awesome icons](https://fontawesome.com/icons?d=gallery) for reference.
 
-##### Contexts
+#### Contexts
 At any moment there is always only one active context, the user can call for voice commands that are defined for that context. The main context is called `root`, most of the actions are defined for it. e.g. `scroll down`, `click` and `select`.
 
 In addition to the `root` context, there is another special context called `global`. Any action defined inside of it will automatically be available for any context. The voice commands `help` and `exit` are defined under the `global` context. These voice commands are always available, but the global context is never active, it's used exclusively for extending the active context.
@@ -89,7 +89,7 @@ const myModule = {
 
 In this code example we've defined a new module that extends two existing contexts (`global` and `root`) and defines commands for a new context called `somethingNew`.
 
-###### Setup and teardown hooks
+##### Setup and teardown hooks
 
 In addition to the command list there are two hooks that can be defined within a context, their name are `setup` and `teardown`, as you might guess, the `setup` function is executed every time the context gets active, and the `teardown` function when the user leaves the context, let's see a code example.
 
@@ -113,7 +113,7 @@ const myModule = {
 }
 ```
 
-##### Commands
+#### Commands
 A voice command is a pair of two important things, a name and an action. When the name is invoked the action is executed. Let's enter into the details, what's a name for this tool? It basically is a string, could be one or more words. e.g. 'click', 'scroll down', '7', 'number 7'. And what about the actions? they're functions that will be executed automatically as soon as their name are invoked, let's see a code example.
 
 ```javascript
@@ -135,7 +135,7 @@ const myModule = {
 
 This module defines a new context with only a single command, but more can be added to the list if needed. As soon as the command is invoked an alert will be shown telling 'hello master'.
 
-##### Command name " * " 
+#### Command name " * " 
 
 Sometimes we can't define all the supported commands by extension, let's imagine we want to support the voice command `open <website name here>`. There is no way to define a command for each website that exists in the entire web. In these cases we can define a command with the name `'*'`. It basically tells to the library, if there is no other better command for what the user has said, give it to me, I'll handle it. Let's see a code example that describes how to use it.
 
@@ -177,7 +177,7 @@ This is useful to tell the library that the voice command was executed successfu
 
 Note: The open website command is just an example. It cannot be considered as production code.
 
-##### Action function
+#### Action function
 
 When the voice command is invoked by the user, the action function is executed with some useful parameters:
  - `rootElement`: DOM element that wraps the library UI
@@ -238,10 +238,10 @@ In the previous example, we have updated the context state to count how many tim
 
 As a final note, the context hooks, `setup` and `teardown` also receives the same parameters than the action functions and they are also allowed to edit the context state.
 
-##### Command help
+#### Command help
 In addition to the `name` and the `action`, a command can also define `help` and `group` texts. Within `help` is expected to briefly describe what the command does. The property `group` is used to define a category. Some times modules define dozens of commands, in that case, it’s useful to group the commands in multiple categories in order to show them to the user in a more descriptive way.
 
-#### Internationalization
+### Internationalization
 
 Modules and commands can be defined for multiple languages, at this moment all the voice commands of this repository are translated to English, Spanish and Portuguese. There is no official language or language by default when starting to define commands, you can define them using words or numbers of any language. Let's see how it looks an internationalized module.
 
@@ -285,9 +285,9 @@ When a name starts with `i18n-`, the tool will try to translate it by searching 
 
 There are two `i18n` objects, one is at the module level and the other at the context level. When translating the `name` and `description` of the module, the first map is used, when translating the command names, help or group properties the second one is used. Translations defined at the module level are not available at the context level.
 
-#### Reference
+### Reference
 
-##### Module
+#### Module
 
 | Property | Value Type | Required | Description                                |
 |----------|------------|----------|--------------------------------------------|
@@ -310,7 +310,7 @@ There are two `i18n` objects, one is at the module level and the other at the co
 | commands | array | no | Command list of the context. It isn't required because a context could be defined for extending a previous defined context with the same `context` name. |
 | i18n | object | no | Language map that will be used to translate the values provided by `name`, `htmlExample` and the texts defined inside of `commands`|
 
-##### Command
+#### Command
 
 | Property | Value Type | Required | Description                                |
 |----------|------------|----------|--------------------------------------------|
