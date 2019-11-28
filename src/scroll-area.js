@@ -1,32 +1,45 @@
+import jQuery from 'jquery';
+import {
+  getVisibleElementsInViewPort,
+  isScrollable,
+} from 'dom-element-types';
+
 export default {
   name: 'i18n-name',
   description: 'i18n-description',
+  icon: 'fa fa-arrows',
   contexts: [{
     context: 'root',
     commands: [{
       name: 'i18n-command.scroll-area',
       group: 'i18n-group.scroll-area',
       help: 'i18n-help.scroll-area',
-      action: ({ tools }) => {
-        const allElementsOnPage = Array.from(document.getElementsByTagName('*'));
-        const scrollableElements = allElementsOnPage.filter((element) => {
-          const computedStyle = getComputedStyle(element);
-          const canScrollNow = element.scrollHeight > element.clientHeight
-              && (computedStyle.overflowY === 'auto' || computedStyle.overflowY === 'scroll');
-          return canScrollNow;
-        });
+      action: () => {
+        const allElementsOnPage = getVisibleElementsInViewPort('*');
+        const scrollableElements = allElementsOnPage.filter(element => isScrollable(element));
 
-        for (let i = 0; i < scrollableElements.length; i++) {
-          const scrollableElement = scrollableElements[i];
-          if (!scrollableElement.classList.contains('hands-free-scrollable')) {
-            scrollableElement.className += ' hands-free-scrollable';
-          }
-        }
+        scrollableElements.forEach((scrollableElement) => {
+          scrollableElement.classList.add('hands-free-scrollable');
+        });
 
         if (scrollableElements.length === 0) {
           return {
             context: 'scroll-area',
-            selectedElement: tools.jQuery('html', 'body'),
+            selectedElement: jQuery('html', 'body'),
+          };
+        }
+
+        if (scrollableElements.length === 1) {
+          const isBody = jQuery(scrollableElements[0]).is('body');
+          if (isBody) {
+            return {
+              context: 'scroll-area',
+              selectedElement: jQuery('html', 'body'),
+            };
+          }
+          return {
+            context: 'scroll-area',
+            selectedElement: scrollableElements[0],
           };
         }
 
