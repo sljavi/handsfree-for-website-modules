@@ -1,5 +1,4 @@
 # Handsfree for website's modules
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)<!-- ALL-CONTRIBUTORS-BADGE:END -->
 Voice commands modules for [Handsfree for web](https://handsfreeforweb.com/) and [Handsfree for website](https://github.com/sljavi/handsfree-for-website)
 
 If you're here most probably is because you're looking for how to add voice commands to the library [Handsfree for website](https://github.com/sljavi/handsfree-for-website) or to the chrome extension [Handsfree for web](https://handsfreeforweb.com/). 
