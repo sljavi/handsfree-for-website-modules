@@ -91,13 +91,13 @@ function getI18nHtmlExample(lang) {
     <p class="box">
       ${texts.audioDescription}<br/>
       <audio controls>
-        <source src="/docs-assets/media/audio.mp3" type="audio/mpeg">
+        <source src="https://handsfreeforweb.com/hfw-assets/audio.mp3" type="audio/mpeg">
       </audio>
     </p>
     <h4>${texts.image}</h4>
     <p class="box">
       ${texts.imageDescription}<br/>
-      <img src="/docs-assets/media/image.png" />
+      <img src="https://handsfreeforweb.com/hfw-assets/image.png" />
     </p>
     <h4>${texts.link}</h4>
     <p class="box">
@@ -112,7 +112,7 @@ function getI18nHtmlExample(lang) {
     <p class="box">
       ${texts.videoDescription}<br/>
       <video width="320" height="240" controls>
-        <source src="/docs-assets/media/video.mp4" type="video/mp4">
+        <source src="https://handsfreeforweb.com/hfw-assets/video.mp4" type="video/mp4">
       </video>
     </p>
   `;

@@ -72,7 +72,7 @@ export default {
         'copy-address': 'Copy address',
         'open-in-new-tab': 'Open in new tab',
         download: 'Download',
-        'html-example': 'Use the command "select" or "select image"<br/><img src="/docs-assets/media/image.png" />',
+        'html-example': 'Use the command "select" or "select image"<br/><img src="https://handsfreeforweb.com/hfw-assets/image.png" />',
         exit: 'Exit',
       },
       es: {
@@ -89,7 +89,7 @@ export default {
         'copy-address': 'Copiar dirección',
         'open-in-new-tab': 'Abrir en nueva pestaña',
         download: 'Descargar',
-        'html-example': 'Usar el comando "seleccionar" or "seleccionar imagen"<br/><img src="/docs-assets/media/image.png" />',
+        'html-example': 'Usar el comando "seleccionar" or "seleccionar imagen"<br/><img src="https://handsfreeforweb.com/hfw-assets/image.png" />',
         exit: 'Salir',
       },
       pt: {
@@ -106,7 +106,7 @@ export default {
         'copy-address': 'Copiar endereço',
         'open-in-new-tab': 'Abrir em uma nova guia',
         download: 'Download',
-        'html-example': 'Use o comando "selecionar" ou "selecionar imagem"<br/><img src="/docs-assets/media/image.png" />',
+        'html-example': 'Use o comando "selecionar" ou "selecionar imagem"<br/><img src="https://handsfreeforweb.com/hfw-assets/image.png" />',
         exit: 'Sair',
       },
     },

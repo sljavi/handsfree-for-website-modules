@@ -36,13 +36,13 @@ const getHtmlExample = language => `
   <h4>${i18n[language].audio}</h4>
   <p class="box">
     <audio controls>
-      <source src="/docs-assets/media/audio.mp3" type="audio/mpeg">
+      <source src="https://handsfreeforweb.com/hfw-assets/audio.mp3" type="audio/mpeg">
     </audio>
   </p>
   <h4>${i18n[language].video}</h4>
   <p class="box">
     <video width="320" height="240" controls>
-      <source src="/docs-assets/media/video.mp4" type="video/mp4">
+      <source src="https://handsfreeforweb.com/hfw-assets/video.mp4" type="video/mp4">
     </video>
   </p>`;
 
