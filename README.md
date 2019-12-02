@@ -336,6 +336,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/leekevinyg"><img src="https://avatars1.githubusercontent.com/u/9059868?v=4" width="100px;" alt="Kevin"/><br /><sub><b>Kevin</b></sub></a><br /><a href="https://github.com/sljavi/handsfree-for-website-modules/commits?author=leekevinyg" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/iMatheusouza"><img src="https://avatars2.githubusercontent.com/u/47475180?v=4" width="100px;" alt="Matheus Freitas"/><br /><sub><b>Matheus Freitas</b></sub></a><br /><a href="#translation-iMatheusouza" title="Translation">🌍</a></td>
   </tr>
 </table>
 
