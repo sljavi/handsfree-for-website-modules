@@ -16,9 +16,16 @@ If you don't know how to code a module, or you have some doubts, post an issue r
  - Node >= 10
  - NPM >= 6
 
-Install it locally by executing the following command
+Install it locally by executing the following commands
 ```
 git clone git@github.com:sljavi/handsfree-for-website-modules.git
+cd handsfree-for-website-module
+npm install
+```
+
+The voice command's [test page](https://sljavi.github.io/handsfree-for-website-modules/dist/index.html) can be opened just by executing 
+```
+npm run start
 ```
 
 ### Extending an existing module
