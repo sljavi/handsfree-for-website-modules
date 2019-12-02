@@ -16,6 +16,7 @@ import open from './open';
 import pickLabel from './pick-label';
 import rangeOptions from './range-options';
 import scroll from './scroll';
+import scrollArea from './scroll-area';
 import search from './search';
 import select from './select';
 import selectOptions from './select-options';
@@ -43,6 +44,7 @@ const coreModules = [
   rangeOptions,
   search,
   scroll,
+  scrollArea,
   select,
   selectOptions,
   textOptions,

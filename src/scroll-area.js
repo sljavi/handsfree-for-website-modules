@@ -1,8 +1,13 @@
-import jQuery from 'jquery';
+import $ from 'jquery';
 import {
   getVisibleElementsInViewPort,
   isScrollable,
 } from 'dom-element-types';
+import scroll from './helpers/scroll';
+
+function getDistance() {
+  return (window.innerHeight || document.documentElement.clientHeight) * 0.8;
+}
 
 export default {
   name: 'i18n-name',
@@ -25,18 +30,11 @@ export default {
         if (scrollableElements.length === 0) {
           return {
             context: 'scroll-area',
-            selectedElement: jQuery('html', 'body'),
+            selectedElement: document.body,
           };
         }
 
         if (scrollableElements.length === 1) {
-          const isBody = jQuery(scrollableElements[0]).is('body');
-          if (isBody) {
-            return {
-              context: 'scroll-area',
-              selectedElement: jQuery('html', 'body'),
-            };
-          }
           return {
             context: 'scroll-area',
             selectedElement: scrollableElements[0],
@@ -77,14 +75,22 @@ export default {
     commands: [{
       name: 'i18n-command.up',
       action: ({ selectedElement, tools }) => {
-        tools.scroll.up(tools.jQuery(selectedElement));
+        if ($(selectedElement).is('body')) {
+          scroll.up($('html'), getDistance());
+        } else {
+          scroll.up($(selectedElement));
+        }
       },
       group: 'i18n-group.up',
       help: 'i18n-help.up',
     }, {
       name: 'i18n-command.down',
       action: ({ selectedElement, tools }) => {
-        tools.scroll.down(tools.jQuery(selectedElement));
+        if ($(selectedElement).is('body')) {
+          scroll.down($('html'), getDistance());
+        } else {
+          scroll.down($(selectedElement));
+        }
       },
       group: 'i18n-group.down',
       help: 'i18n-help.down',
@@ -102,10 +108,10 @@ export default {
       es: {
         name: 'Desplazar área',
         'command.up': 'arriba',
-        'group.up': 'Dirección de desplazamientoiba',
+        'group.up': 'Dirección de desplazamiento',
         'help.up': 'Desplaza hacia arriba el elemento seleccionado',
         'command.down': 'abajo',
-        'group.down': 'Dirección de desplazamientoiba',
+        'group.down': 'Dirección de desplazamiento',
         'help.down': 'Desplaza hacia abajo el elemento seleccionado',
       },
       pt: {

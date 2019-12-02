@@ -6,7 +6,10 @@ export function copy({ selectedElement }) {
 }
 
 function handleSwitchOnSelectElement(selectedElement) {
-  return isText(selectedElement);
+  if (!selectedElement.classList.contains('hands-free-scrollable')) {
+    return isText(selectedElement);
+  }
+  return false;
 }
 
 export default {
