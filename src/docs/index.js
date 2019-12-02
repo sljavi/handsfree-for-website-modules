@@ -1,8 +1,10 @@
 import handsfreeForWebsite from 'handsfree-for-website'
 import jQuery from 'jquery';
+import modules from '../index';
 
-const handsfree = handsfreeForWebsite.init();
-
+const handsfree = handsfreeForWebsite.init({
+  modules,
+});
 
 let lang = handsfree.getLanguage().split('-')[0];
 
@@ -37,7 +39,6 @@ function getTranslation(key = '', scope) {
 }
 
 function getSortedModules() {
-  const modules = handsfree.getModules();
   return modules
     .sort((moduleA, moduleB) => {
       const nameA = getTranslation(moduleA.name, moduleA);
@@ -110,7 +111,7 @@ function generateModules() {
       const contexts = (module.contexts || []).map(getModuleContext);
       const moduleEl = `
         <li>
-          <div class="collapsible-header"><i class="${module.icon}"></i>${name}</div>
+          <div class="collapsible-header" role="button"><i class="${module.icon}"></i>${name}</div>
           <div class="collapsible-body">
             <p>${getTranslation(module.description, module)}</p>
             ${contexts.join('')}
