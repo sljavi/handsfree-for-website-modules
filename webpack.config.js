@@ -1,30 +1,29 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
-module.exports = {
+const mode = process.env.NODE_ENV;
+const devtool = 'source-map';
+const moduleConfig = {
+  rules: [{
+    test: /\.js$/,
+    exclude: /node_modules/,
+    loader: 'babel-loader',
+  }],
+};
+
+module.exports = [{
   entry: {
-    handsfreeForWebsiteModules: './src/index.js',
-    docs: ['@babel/polyfill', './src/docs/index.js'],
+    path: ['./src/index.js'],
   },
-  mode: process.env.NODE_ENV,
+  mode,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: 'handsfree-for-website-modules.js',
     library: 'handsfreeForWebsiteModules',
     libraryTarget: 'umd',
   },
-  devServer: {
-    https: true,
-    contentBase: './dist',
-  },
-  devtool: 'source-map',
-  module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-    }],
-  },
+  devtool,
+  module: moduleConfig,
   externals: {
     lodash: 'lodash',
     moment: 'moment',
@@ -32,14 +31,32 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin([{
+      from: './node_modules/handsfree-for-website/dist/fonts',
+      to: 'fonts',
+    }]),
+  ],
+}, {
+  entry: {
+    docs: ['@babel/polyfill', './src/docs/index.js'],
+  },
+  mode: process.env.NODE_ENV,
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'docs.js',
+  },
+  devServer: {
+    https: true,
+    contentBase: './dist',
+  },
+  devtool,
+  module: moduleConfig,
+  plugins: [
+    new CopyPlugin([{
       from: './src/docs/index.html',
       to: '',
     }, {
       from: './src/docs/style.css',
       to: '',
-    }, {
-      from: './node_modules/handsfree-for-website/dist/fonts',
-      to: 'fonts',
     }]),
   ],
-};
+}];
