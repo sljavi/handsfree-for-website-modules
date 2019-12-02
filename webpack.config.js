@@ -37,7 +37,7 @@ module.exports = [{
   ],
 }, {
   entry: {
-    docs: ['@babel/polyfill', './src/docs/index.js'],
+    docs: ['@babel/polyfill/noConflict', './src/docs/index.js'],
   },
   mode: process.env.NODE_ENV,
   output: {
