@@ -1,5 +1,9 @@
 import $ from 'jquery';
 import scroll from './helpers/scroll';
+import {
+  getVisibleElementsInViewPort,
+  isScrollable,
+} from 'dom-element-types';
 
 const LINE_HEIGHT = 14;
 
@@ -33,6 +37,37 @@ function bottom() {
 
 function top() {
   scroll.top(getScrollContainer());
+}
+
+function scrollArea() {
+  const allElementsOnPage = getVisibleElementsInViewPort('*');
+  const scrollableElements = allElementsOnPage.filter(element => isScrollable(element));
+
+  scrollableElements.forEach((scrollableElement) => {
+    scrollableElement.classList.add('hands-free-scrollable');
+  });
+
+  if (scrollableElements.length === 0) {
+    return {
+      context: 'scroll-area',
+      selectedElement: document.body,
+    };
+  }
+
+  if (scrollableElements.length === 1) {
+    return {
+      context: 'scroll-area',
+      selectedElement: scrollableElements[0],
+    };
+  }
+
+  return {
+    context: 'pickLabel',
+    labels: '.hands-free-scrollable',
+    selectedElementHandler: el => ({
+      selectedElement: el,
+    }),
+  };
 }
 
 export default {
@@ -81,7 +116,13 @@ export default {
       help: 'i18n-help.scroll-to-the-bottom',
       action: bottom,
       group: 'i18n-group.scroll',
-    }],
+    }, {
+      name: 'i18n-command.scroll-area',
+      help: 'i18n-help.scroll-area',
+      action: scrollArea,
+      group: 'i18n-group.scroll-area',
+    },
+  ],
     i18n: {
       en: {
         'group.scroll': 'Scroll',
@@ -101,6 +142,9 @@ export default {
         'help.scroll-to-the-top': 'Performs a scroll up of the document until the beginning of it',
         'command.scroll-to-the-bottom': 'scroll to the bottom',
         'help.scroll-to-the-bottom': 'Performs a scroll down of the document until the end of it',
+        'command.scroll-area': 'Scroll area',
+        'help.scroll-area': 'When multiple scroll areas are available, allows you to pick a particular area to scroll',
+        'group.scroll-area': 'Scroll area',
       },
       es: {
         'group.scroll': 'Desplazarse',
@@ -120,6 +164,9 @@ export default {
         'help.scroll-to-the-top': 'Desplazar el contenido hasta el inicio',
         'command.scroll-to-the-bottom': 'abajo',
         'help.scroll-to-the-bottom': 'Desplazar el contenido hasta el final',
+        'command.scroll-area': 'Desplazar área',
+        'help.scroll-area': 'Cuando múltiples áreas pueden desplazarse, permite seleccionar el área que se quiere desplazar',
+        'group.scroll-area': 'Desplazar área',
       },
       pt: {
         'group.scroll': 'Rolar',
@@ -139,6 +186,66 @@ export default {
         'help.scroll-to-the-top': 'Executa uma rolagem para cima do documento até o começo dele',
         'command.scroll-to-the-bottom': 'final da página',
         'help.scroll-to-the-bottom': 'Executa uma rolagem para baixo do documento até o final dele',
+        'command.scroll-area': 'Rolar área',
+        'help.scroll-area': 'Quando houver diversas áreas de rolagem disponíveis, é possível selecionar uma área específica para rolar',
+        'group.scroll-area': 'Rolar área',
+      },
+    },
+  }, {
+    context: 'scroll-area',
+    name: 'i18n-name',
+    switchOnSelectElement: el => el.classList.contains('hands-free-scrollable'),
+    setup: () => ({ showCommandList: true }),
+    commands: [{
+      name: 'i18n-command.up',
+      action: ({ selectedElement }) => {
+        if ($(selectedElement).is('body')) {
+          scroll.up($('html'), getDistance());
+        } else {
+          scroll.up($(selectedElement));
+        }
+      },
+      group: 'i18n-group.up',
+      help: 'i18n-help.up',
+    }, {
+      name: 'i18n-command.down',
+      action: ({ selectedElement }) => {
+        if ($(selectedElement).is('body')) {
+          scroll.down($('html'), getDistance());
+        } else {
+          scroll.down($(selectedElement));
+        }
+      },
+      group: 'i18n-group.down',
+      help: 'i18n-help.down',
+    }],
+    i18n: {
+      en: {
+        name: 'Scroll Area',
+        'command.up': 'Up',
+        'group.up': 'Scroll Direction',
+        'help.up': 'Scrolls a selected element up',
+        'command.down': 'Down',
+        'group.down': 'Scroll Direction',
+        'help.down': 'Scrolls a selected element down',
+      },
+      es: {
+        name: 'Desplazar área',
+        'command.up': 'arriba',
+        'group.up': 'Dirección de desplazamiento',
+        'help.up': 'Desplaza hacia arriba el elemento seleccionado',
+        'command.down': 'abajo',
+        'group.down': 'Dirección de desplazamiento',
+        'help.down': 'Desplaza hacia abajo el elemento seleccionado',
+      },
+      pt: {
+        name: 'Área de rolagem',
+        'command.up': 'Cima',
+        'group.up': 'Sentido da rolagem',
+        'help.up': 'Rolar para cima o elemento selecionado',
+        'command.down': 'Baixo',
+        'group.down': 'Sentido da rolagem',
+        'help.down': 'Rolar para baixo o elemento selecionado',
       },
     },
   }],
