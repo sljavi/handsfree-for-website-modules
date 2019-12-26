@@ -44,6 +44,14 @@ export default {
         'group.exit': 'Deixe a operação atual',
         'allowed-commands': 'Comandos Permitidos',
       },
+      zh: {
+        'command-not-available': '命令不可用',
+        'command-not-available-help': '命令不可用',
+        'command.exit': '出口',
+        'help.exit': '离开命令会话',
+        'group.exit': '退出当前操作',
+        'allowed-commands': '允许的命令',
+      },
     },
   }, {
     context: 'root',
@@ -73,6 +81,10 @@ export default {
     pt: {
       name: 'Contexto Global',
       description: 'Este módulo especial fornece apenas comandos e traduções globais',
+    },
+    zh: {
+      name: '全球背景',
+      description: '该特殊模块仅提供全局命令和翻译',
     },
   },
 };

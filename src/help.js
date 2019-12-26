@@ -76,6 +76,21 @@ export default {
         'scroll-down': 'Rolar para Baixo',
         'help-bar': 'Barra de Ajuda',
       },
+      zh: {
+        name: '全球',
+        'command.help': '救命',
+        'help.help': '显示此帮助对话框',
+        'group.help': '获得更多帮助',
+        'command.help-bar': '帮助栏',
+        'help.help-bar': '显示允许的命令列表',
+        'group.help-bar': '获得更多帮助',
+        help: '救命',
+        'allowed-commands-in-this-context': '在这种情况下允许的命令',
+        exit: '出口',
+        'scroll-up': '向上滚动',
+        'scroll-down': '向下滚动',
+        'help-bar': '帮助栏',
+      },
     },
   }],
   i18n: {
@@ -90,6 +105,10 @@ export default {
     pt: {
       name: 'Ajuda',
       description: 'Exibe as informações sobre comandos disponíveis',
+    },
+    zh: {
+      name: '救命',
+      description: '携带有关允许的命令的信息',
     },
   },
 };
