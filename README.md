@@ -325,6 +325,7 @@ There are two `i18n` objects, one is at the module level and the other at the co
 | action | function | yes | The function that will be executed when the user says the given `name` |
 | help | string | yes | A description of the command. |
 | group | string | no | A category name that could be useful for command grouping |
+| hideInCommandList | boolean | no | Useful to omit the command name from the list of commands when `showCommandList` is turned on | 
 
 ## Contributors ✨
 

@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import scroll from './helpers/scroll';
 import {
   getVisibleElementsInViewPort,
   isScrollable,
 } from 'dom-element-types';
+import scroll from './helpers/scroll';
 
 const LINE_HEIGHT = 14;
 
@@ -121,8 +121,7 @@ export default {
       help: 'i18n-help.scroll-area',
       action: scrollArea,
       group: 'i18n-group.scroll-area',
-    },
-  ],
+    }],
     i18n: {
       en: {
         'group.scroll': 'Scroll',

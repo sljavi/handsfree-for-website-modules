@@ -22,11 +22,13 @@ export default {
       help: 'i18n-help.help',
       group: 'i18n-group.help',
       action: help,
+      hideInCommandList: true,
     }, {
       name: 'i18n-command.help-bar',
       help: 'i18n-help.help-bar',
       group: 'i18n-group.help-bar',
       action: helpBar,
+      hideInCommandList: true,
     }],
     i18n: {
       en: {
