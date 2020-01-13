@@ -1,4 +1,4 @@
-import handsfreeForWebsite from 'handsfree-for-website'
+import handsfreeForWebsite from 'handsfree-for-website';
 import jQuery from 'jquery';
 import modules from '../index';
 

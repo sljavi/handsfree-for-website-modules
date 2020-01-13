@@ -76,7 +76,7 @@ export default {
         'scroll-down': 'Rolar para Baixo',
         'help-bar': 'Barra de Ajuda',
       },
-      zh: {
+      yue: {
         name: '全球',
         'command.help': '救命',
         'help.help': '显示此帮助对话框',
@@ -106,7 +106,7 @@ export default {
       name: 'Ajuda',
       description: 'Exibe as informações sobre comandos disponíveis',
     },
-    zh: {
+    yue: {
       name: '救命',
       description: '携带有关允许的命令的信息',
     },

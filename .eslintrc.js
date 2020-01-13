@@ -13,6 +13,7 @@ module.exports = {
   ],
   rules: {
     'import/prefer-default-export': ['off'],
+    'arrow-body-style': ['off'],
     'prefer-destructuring': ['off'],
     'no-console': ['off'],
     'no-unused-vars': ['error', {'args': 'none'}],

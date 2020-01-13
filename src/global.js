@@ -44,7 +44,7 @@ export default {
         'group.exit': 'Deixe a operação atual',
         'allowed-commands': 'Comandos Permitidos',
       },
-      zh: {
+      yue: {
         'command-not-available': '命令不可用',
         'command-not-available-help': '命令不可用',
         'command.exit': '出口',
@@ -82,7 +82,7 @@ export default {
       name: 'Contexto Global',
       description: 'Este módulo especial fornece apenas comandos e traduções globais',
     },
-    zh: {
+    yue: {
       name: '全球背景',
       description: '该特殊模块仅提供全局命令和翻译',
     },
