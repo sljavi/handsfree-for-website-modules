@@ -86,6 +86,13 @@ export default {
         'selected-color': 'Cor Selecionada',
         'html-example': 'Use o comando "clique" ou "clicar em uma cor" sobre a caixa de cor, então será possível escolher uma cor<br/><input type="color" />',
       },
+      yue: {
+        name: 'Color Picker',
+        help: 'Say the number of the selected color',
+        'select-a-color': 'Select a color',
+        'selected-color': 'Selected Color',
+        'html-example': 'Use the command "click" or "click color" over the color box then you will be able to pick a color<br/><input type="color" />',
+      },
     },
   }],
   i18n: {
@@ -100,6 +107,10 @@ export default {
     pt: {
       name: 'Escolha uma cor',
       description: 'Depois de clicar sobre a caixa de cor, será possível selecionar uma cor',
+    },
+    yue: {
+      name: 'Pick a color',
+      description: 'After click over color input it allows you select a color',
     },
   },
 };

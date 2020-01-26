@@ -62,6 +62,11 @@ export default {
         'help.auto-scroll': 'Rolagem Contínua',
         'group.auto-scroll': 'Rolar',
       },
+      yue: {
+        'command.auto-scroll': 'auto scroll',
+        'help.auto-scroll': 'Automatic scroll down',
+        'group.auto-scroll': 'Scroll',
+      },
     },
   }, {
     context: 'autoScroll',
@@ -133,6 +138,22 @@ export default {
         slower: 'Diminuir Velocidade',
         speed: 'Velocidade',
       },
+      yue: {
+        name: 'Auto Scrolling',
+        'command.stop': 'stop',
+        'help.stop': 'Stop scrolling',
+        'group.stop': 'Control scrolling',
+        'command.faster': 'faster',
+        'help.faster': 'Increase scrolling speed',
+        'group.faster': 'Control scrolling',
+        'command.slower': 'slower',
+        'help.slower': 'Decrease scrolling speed',
+        'group.slower': 'Control scrolling',
+        stop: 'Stop',
+        faster: 'Faster',
+        slower: 'Slower',
+        speed: 'Speed',
+      },
     },
   }],
   i18n: {
@@ -147,6 +168,10 @@ export default {
     pt: {
       name: 'Rolagem Automática',
       description: 'Usado para iniciar uma Rolagem Contínua',
+    },
+    yue: {
+      name: 'Auto Scrolling',
+      description: 'Useful to start a continue scroll down',
     },
   },
 };

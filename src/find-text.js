@@ -75,6 +75,11 @@ export default {
         'help.find-text': 'Exibe o localizador de texto',
         'group.find-text': 'Pesquisar dentro da página',
       },
+      yue: {
+        'command.find-text': 'find text',
+        'help.find-text': 'Displays text finder',
+        'group.find-text': 'Search inside the page',
+      },
     },
   }, {
     context: 'findText',
@@ -136,6 +141,19 @@ export default {
         next: 'Próximo',
         exit: 'Sair',
       },
+      yue: {
+        name: 'Text finder',
+        'command.previous': 'previous',
+        'help.previous': 'Find previous',
+        'command.next': 'next',
+        'help.next': 'Find next',
+        'help.*': 'Say the words you want to search',
+        group: 'Search inside the page',
+        'search-params': 'Say the words you want to search',
+        previous: 'Previous',
+        next: 'Next',
+        exit: 'Exit',
+      },
     },
   }],
   i18n: {
@@ -150,6 +168,10 @@ export default {
     pt: {
       name: 'Pesquisar Texto',
       description: 'Pesquisa palavras na página atual',
+    },
+    yue: {
+      name: 'Search text',
+      description: 'Search text in the current page',
     },
   },
 };
