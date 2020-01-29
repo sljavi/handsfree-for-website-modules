@@ -109,6 +109,23 @@ export default {
         'html-example': 'Use o comando "selecionar" ou "selecionar imagem"<br/><img src="https://handsfreeforweb.com/hfw-assets/image.png" />',
         exit: 'Sair',
       },
+      yue: {
+        name: 'Image Actions',
+        'command.copy-address': 'copy address',
+        'group.copy-address': 'Image Actions',
+        'help.copy-address': 'Copies the address of the selected image',
+        'command.open-in-new-tab': 'open in new tab',
+        'group.open-in-new-tab': 'Image Actions',
+        'help.open-in-new-tab': 'Opens the selected image address in a new tab',
+        'command.download': 'download',
+        'group.download': 'Image Actions',
+        'help.download': 'Downloads the selected image',
+        'copy-address': 'Copy address',
+        'open-in-new-tab': 'Open in new tab',
+        download: 'Download',
+        'html-example': 'Use the command "select" or "select image"<br/><img src="https://handsfreeforweb.com/hfw-assets/image.png" />',
+        exit: 'Exit',
+      },
     },
   }],
   i18n: {
@@ -123,6 +140,10 @@ export default {
     pt: {
       name: 'Opções de Imagem',
       description: 'Após selecionar uma imagem, é possível executar diversas ações.',
+    },
+    yue: {
+      name: 'Image Options',
+      description: 'After select an image it allows you to perform several actions',
     },
   },
 };

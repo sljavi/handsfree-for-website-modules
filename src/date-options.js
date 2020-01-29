@@ -153,6 +153,26 @@ export default {
         locale: 'pt',
         format: 'dddd, MMMM [e] AAAA', // review
       },
+      yue: {
+        name: 'Date Picker',
+        help: 'Say the number of the selected label',
+        'command.month': 'month',
+        'command.day': 'day',
+        'command.year': 'year',
+        'help.month': 'Switches to month picker',
+        'help.day': 'Switches to day picker',
+        'help.year': 'Switches to year picker',
+        'group.month': 'Switch tab',
+        'group.day': 'Switch tab',
+        'group.year': 'Switch tab',
+        'html-example': 'Use the command "click" o "click date" over the following date input then you will be able to pick a date<br/><input type="date" />',
+        day: 'day',
+        month: 'month',
+        year: 'year',
+        'say-year-number': 'Say the year number',
+        locale: 'en',
+        format: 'dddd, MMMM Do YYYY', // don't translate in case of doubt
+      },
     },
   }],
   i18n: {
@@ -167,6 +187,10 @@ export default {
     pt: {
       name: 'Escolha uma data',
       description: 'Depois de clicar sobre o seletor de data é possível selecionar uma data.',
+    },
+    yue: {
+      name: 'Pick a date',
+      description: 'After click over date input it allows you select a date',
     },
   },
 };

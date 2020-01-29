@@ -1,5 +1,5 @@
 import autoScroll from './auto-scroll';
-import click from './click';
+import click from './click/index';
 import colorOptions from './color-options';
 import dateOptions from './date-options';
 import datetimeOptions from './datetime-options';
