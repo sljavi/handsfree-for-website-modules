@@ -87,11 +87,11 @@ export default {
         'html-example': 'Use o comando "clique" ou "clicar em uma cor" sobre a caixa de cor, então será possível escolher uma cor<br/><input type="color" />',
       },
       yue: {
-        name: 'Color Picker',
-        help: 'Say the number of the selected color',
-        'select-a-color': 'Select a color',
-        'selected-color': 'Selected Color',
-        'html-example': 'Use the command "click" or "click color" over the color box then you will be able to pick a color<br/><input type="color" />',
+        name: '選擇顏色',
+        help: '讀出選取咗既顏色',
+        'select-a-color': '選擇一個顏色',
+        'selected-color': '選擇咗既顏色',
+        'html-example': '喺個顏色格仔上面用「點擊」或「點擊顏色」指令，你就可以選擇一種顏色<br/><input type="color" />',
       },
     },
   }],
@@ -109,8 +109,8 @@ export default {
       description: 'Depois de clicar sobre a caixa de cor, será possível selecionar uma cor',
     },
     yue: {
-      name: 'Pick a color',
-      description: 'After click over color input it allows you select a color',
+      name: '選擇顏色',
+      description: '點擊顏色輸入後，你可以選擇顏色',
     },
   },
 };
