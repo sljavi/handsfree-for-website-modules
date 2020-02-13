@@ -75,6 +75,17 @@ export default {
         'command.stop': 'parar',
         'help.stop': 'Pára o carregamento da página atual',
       },
+      yue: {
+        group: 'Navigation',
+        'command.go-back': 'go back',
+        'help.go-back': 'Goes back in the browser history',
+        'command.go-forward': 'go forward',
+        'help.go-forward': 'Goes forward in the browser history',
+        'command.reload': 'reload',
+        'help.reload': 'Reloads the current page',
+        'command.stop': 'stop',
+        'help.stop': 'Stops the loading of the current page',
+      },
     },
   }],
   i18n: {
@@ -89,6 +100,10 @@ export default {
     pt: {
       name: 'Navegação',
       description: 'Este módulo fornece vários comandos para controlar a navegação. Tais como: voltar, avançar, recarregar e parar a página webge loading.',
+    },
+    yue: {
+      name: 'Navigation',
+      description: 'This module provides several commands to control the navigation. Such as: go back, go forward, reload and stop the web page loading.',
     },
   },
 };

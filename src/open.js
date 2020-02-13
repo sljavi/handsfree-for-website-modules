@@ -40,6 +40,11 @@ export default {
         'help.open': 'Abra um Site',
         'group.open': 'Abrir',
       },
+      yue: {
+        'command.open': 'open',
+        'help.open': 'Open a website',
+        'group.open': 'Open',
+      },
     },
   }, {
     context: 'open',
@@ -73,6 +78,13 @@ export default {
         'open-params': 'Diga o nome do site que você deseja abrir',
         exit: 'Sair',
       },
+      yue: {
+        name: 'Open',
+        'help.*': 'Say the name of the site you want to open',
+        group: 'Open',
+        'open-params': 'Say the name of the site you want to open',
+        exit: 'Exit',
+      },
     },
   }],
   i18n: {
@@ -87,6 +99,10 @@ export default {
     pt: {
       name: 'Abrir um Site',
       description: 'Este módulo permite que você abra sites.',
+    },
+    yue: {
+      name: 'Open a website',
+      description: 'This module allows you to open websites.',
     },
   },
 };

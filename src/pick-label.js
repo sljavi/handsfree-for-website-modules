@@ -72,6 +72,14 @@ export default {
         'label-options': 'Diga o número do rótulo selecionado',
         exit: 'Sair',
       },
+      yue: {
+        name: 'Element Picker',
+        'help.*': 'Say the number of the selected label',
+        group: 'Pick a number',
+        'html-example': 'Use the command "click" over the following two buttons <p style="margin-top: 1em; margin-bottom: 0.2em;"><button>Button A</button> <button>Button B</button></p>',
+        'label-options': 'Say the number of the selected label',
+        exit: 'Exit',
+      },
     },
   }],
   i18n: {
@@ -86,6 +94,10 @@ export default {
     pt: {
       name: 'Selecionar rótulo',
       description: 'Este módulo é útil para escolher o rótulo de algum elemento depois de usar os comandos "clique" ou "selecionar" e há mais de uma opção para escolher.',
+    },
+    yue: {
+      name: 'Pick Label',
+      description: 'This module is useful to pick the label of some element after use the commands "click" or "select" and there is more than one option to choose.',
     },
   },
 };

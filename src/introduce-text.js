@@ -20,6 +20,11 @@ const i18n = {
     singleLine: 'Texto monolinha',
     multiLine: 'Texto multilinhas',
   },
+  yue: {
+    use: 'Use the command "click" or "click text" over one of the following field texts then you will be able to introduce some text',
+    singleLine: 'Single Line Text',
+    multiLine: 'Multiline Text',
+  },
 };
 
 function getHtmlExample(lang) {
@@ -233,6 +238,39 @@ export default {
         'html-example': getHtmlExample('pt'),
         ...introduceTextFreeSpeak.i18n.pt,
       },
+      yue: {
+        name: 'Introduce Text',
+        'help.*': 'Introduces text into the selected text element',
+        'command.exit': 'exit',
+        'help.exit': 'Leaves the introduce text session',
+        'group.exit': 'Leave session',
+        'command.display-keyboard': 'keyboard',
+        'help.display-keyboard': 'Shows a virtual keyboard',
+        'group.display-keyboard': 'Keyboard',
+        'command.hide-keyboard': 'hide keyboard',
+        'help.hide-keyboard': 'Close the virtual keyboard',
+        'group.hide-keyboard': 'Keyboard',
+        'dictate-text': 'Dictate free text',
+        submit: 'Submit',
+        exit: 'Exit',
+        'html-example': getHtmlExample('yue'),
+        '↤ bksp': '↤ bksp',
+        'tab ↦': 'tab ↦',
+        '↵ enter': '↵ enter',
+        '⇧ shift': '⇧ shift',
+        accept: 'accept',
+        space: 'space',
+        locale: 'en',
+        keyboard: 'Keyboard',
+        'hide-keyboard': 'Hide keyboard',
+        remove: 'Remove',
+        'remove-line': 'Remove line',
+        'clean-up': 'Clean up',
+        paste: 'Paste',
+        redo: 'Redo',
+        undo: 'Undo',
+        ...introduceTextFreeSpeak.i18n.yue,
+      },
     },
   }],
   i18n: {
@@ -247,6 +285,10 @@ export default {
     pt: {
       name: 'Introduzir Texto',
       description: 'Após clicar sobre o campo de texto será possível introduzir um texto',
+    },
+    yue: {
+      name: 'Introduce Text',
+      description: 'After click over a text field it allows you to introduce text',
     },
   },
 };

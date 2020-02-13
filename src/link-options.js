@@ -103,6 +103,23 @@ export default {
         'html-example': 'Use o comando "selecionar" ou "selecionar link" <br/> <a href="#"> Selecione este link </a>',
         exit: 'Sair',
       },
+      yue: {
+        name: 'Link Actions',
+        'command.copy': 'copy',
+        'help.copy': 'Copies the link text',
+        'group.copy': 'Link Actions',
+        'command.copy-address': 'copy address',
+        'help.copy-address': 'Copies the address of the selected element',
+        'group.copy-address': 'Link Actions',
+        'command.open-in-new-tab': 'open in new tab',
+        'help.open-in-new-tab': 'Opens the selected link address in a new tab',
+        'group.open-in-new-tab': 'Link Actions',
+        copy: 'Copy',
+        'copy-address': 'Copy address',
+        'open-in-new-tab': 'Open in new tab',
+        'html-example': 'Use the command "select" or "select link"<br/><a href="#">Select this link</a>',
+        exit: 'Exit',
+      },
     },
   }],
   i18n: {
@@ -117,6 +134,10 @@ export default {
     pt: {
       name: 'Opções de Link',
       description: 'Após selecionar o link, é possível executar diversas ações',
+    },
+    yue: {
+      name: 'Link Options',
+      description: 'After select a link it allows you to perform several actions',
     },
   },
 };

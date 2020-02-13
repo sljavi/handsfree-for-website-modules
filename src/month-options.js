@@ -134,6 +134,22 @@ export default {
         locale: 'pt',
         format: 'MMMM [e] YYYY',
       },
+      yue: {
+        name: 'Month Picker',
+        'help.*': 'Say the number of the selected label',
+        'command.month': 'month',
+        'command.year': 'year',
+        'help.month': 'Switches to month picker',
+        'help.year': 'Switches to year picker',
+        'group.month': 'Switch tab',
+        'group.year': 'Switch tab',
+        'html-example': 'Use the command "click" o "click date" over the following date input then you will be able to pick a month of a given year<br/><input type="month" />',
+        month: 'month',
+        year: 'year',
+        'say-year-number': 'Say the year number',
+        locale: 'en',
+        format: 'MMMM YYYY',
+      },
     },
   }],
   i18n: {
@@ -148,6 +164,10 @@ export default {
     pt: {
       name: 'Selecione um Mês',
       description: 'Após clicar no campo de inserção de data, será possível escolher o um mês determinado',
+    },
+    yue: {
+      name: 'Pick a month',
+      description: 'After click over a date input it allows you to select a month of an year',
     },
   },
 };
