@@ -41,9 +41,9 @@ export default {
         'group.open': 'Abrir',
       },
       yue: {
-        'command.open': 'open',
-        'help.open': 'Open a website',
-        'group.open': 'Open',
+        'command.open': '開啟',
+        'help.open': '開啟網頁',
+        'group.open': '開啟',
       },
     },
   }, {
@@ -79,11 +79,11 @@ export default {
         exit: 'Sair',
       },
       yue: {
-        name: 'Open',
-        'help.*': 'Say the name of the site you want to open',
-        group: 'Open',
-        'open-params': 'Say the name of the site you want to open',
-        exit: 'Exit',
+        name: '開啟',
+        'help.*': '讀出你想開啟的網站名稱',
+        group: '開啟',
+        'open-params': '讀出你想開啟的網站名稱',
+        exit: '離開',
       },
     },
   }],
@@ -101,8 +101,8 @@ export default {
       description: 'Este módulo permite que você abra sites.',
     },
     yue: {
-      name: 'Open a website',
-      description: 'This module allows you to open websites.',
+      name: '開啟網頁',
+      description: '你可以使用這個模組開啟網頁。',
     },
   },
 };
