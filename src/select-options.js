@@ -17,6 +17,10 @@ const i18n = {
     use: 'Use o comando "clique" ou "selecionar clique" sobre o seguinte elemento selecionado',
     value: 'Valor',
   },
+  yue: {
+    use: 'Use the command "click" or "click select" over the following select',
+    value: 'Value',
+  },
 };
 
 function getHtmlExample(lang) {
@@ -147,6 +151,18 @@ export default {
         'scroll-down': 'Rolar para Baixo',
         'html-example': getHtmlExample('pt'),
       },
+      yue: {
+        name: 'Select Value',
+        'command.scroll-up': 'scroll up',
+        'command.scroll-down': 'scroll down',
+        'help.scroll-up': 'Scroll up the option list',
+        'help.scroll-down': 'Scroll down the option list',
+        'help.*': 'Say the number of the selected label',
+        'select-an-option': 'Select an option',
+        'scroll-up': 'Scroll Up',
+        'scroll-down': 'Scroll Down',
+        'html-example': getHtmlExample('yue'),
+      },
     },
   }],
   i18n: {
@@ -161,6 +177,10 @@ export default {
     pt: {
       name: 'Escolha a opção',
       description: 'Após clicar num campo de seleção é possível selecionar um valor.',
+    },
+    yue: {
+      name: 'Pick an option',
+      description: 'After click over a select input it allows you to select a value.',
     },
   },
 };

@@ -142,6 +142,23 @@ export default {
         locale: 'pt',
         format: 'h:mm a',
       },
+      yue: {
+        name: 'Time Picker',
+        help: 'Say the number of the selected label',
+        'command.hour': 'hour',
+        'command.minutes': 'minutes',
+        'help.hour': 'Switches to hour picker',
+        'help.minutes': 'Switches to minutes picker',
+        'group.hour': 'Switch tab',
+        'group.minutes': 'Switch tab',
+        'html-example': 'Use the command "click" o "click date" over the following time input then you will be able to pick a time<br/><input type="time" />',
+        hour: 'hour',
+        minutes: 'minutes',
+        'say-minute-number': 'Say the minute number. (0 to 59)',
+        'say-hour-number': 'Say the hour number. (0 to 23)',
+        locale: 'yue',
+        format: 'h:mm a',
+      },
     },
   }],
   i18n: {
@@ -156,6 +173,10 @@ export default {
     pt: {
       name: 'Seleciona uma hora',
       description: 'Após clicar sobre o seletor de horas é possível selecionar uma hora.',
+    },
+    yue: {
+      name: 'Pick a time',
+      description: 'After click over date input its allow you to select a time',
     },
   },
 };

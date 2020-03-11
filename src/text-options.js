@@ -53,6 +53,14 @@ export default {
         copy: 'Copiar',
         'html-example': 'Use o comando "copiar" ou "selecionar texto" para selecionar o texto',
       },
+      yue: {
+        name: 'Text Actions',
+        'command.copy': 'copy',
+        'help.copy': 'Copies the selected text',
+        'group.copy': 'Copy text',
+        copy: 'Copy',
+        'html-example': 'Use the command "select" or "select text" to select this text',
+      },
     },
   }],
   i18n: {
@@ -67,6 +75,10 @@ export default {
     pt: {
       name: 'Opções de Texto',
       description: 'Após selecionar um texto permite que seja executado alguma ação.',
+    },
+    yue: {
+      name: 'Text options',
+      description: 'After select a text it allows you to perform some action.',
     },
   },
 };

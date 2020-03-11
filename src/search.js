@@ -36,6 +36,11 @@ export default {
         'help.search': 'Pesquisa algo no Google',
         'group.search': 'Pesquisar',
       },
+      yue: {
+        'command.search': 'search',
+        'help.search': 'Search something in Google',
+        'group.search': 'Search',
+      },
     },
   }, {
     context: 'search',
@@ -69,6 +74,13 @@ export default {
         'search-params': 'Diga o nome do que você deseja pesquisar',
         exit: 'Sair',
       },
+      yue: {
+        name: 'Search',
+        'help.*': 'Say the name of what you want to search',
+        group: 'Search',
+        'search-params': 'Say the name of what you want to search',
+        exit: 'Exit',
+      },
     },
   }],
   i18n: {
@@ -83,6 +95,10 @@ export default {
     pt: {
       name: 'Pesquisar',
       description: 'Este módulo permite que pesquise facilmente algo.',
+    },
+    yue: {
+      name: 'Search',
+      description: 'This module allows you to easily search for something.',
     },
   },
 };

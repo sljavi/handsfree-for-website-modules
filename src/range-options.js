@@ -67,6 +67,14 @@ export default {
         'selected-value': 'Valor selecionado',
         'html-example': 'Use o comando "click" ou "click alcance" na seguinte entrada de intervalo <p style="margin-top: 1em; margin-bottom: 0.2em;"><input type="range"/></p>',
       },
+      yue: {
+        name: 'Range Selection',
+        'help.*': 'Say the number of the selected value',
+        'say-a-number-between': 'Say a number between ',
+        and: 'and',
+        'selected-value': 'Selected value',
+        'html-example': 'Use the command "click" or "click range" over the following range input <p style="margin-top: 1em; margin-bottom: 0.2em;"><input type="range"/></p>',
+      },
     },
   }],
   i18n: {
@@ -81,6 +89,10 @@ export default {
     pt: {
       name: 'Opções de Alcance',
       description: 'Depois de selecionar um link, você pode definir um valor entre o mínimo e o máximo especificados.',
+    },
+    yue: {
+      name: 'Range Options',
+      description: 'After select a link it allows you to set a value between the specified minimum and maximum.',
     },
   },
 };

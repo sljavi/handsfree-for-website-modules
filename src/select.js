@@ -31,6 +31,14 @@ const filters = {
     text: 'texto',
     video: 'vídeo',
   },
+  yue: {
+    audio: 'audio',
+    image: 'image',
+    link: 'link',
+    media: 'media',
+    text: 'text',
+    video: 'video',
+  },
 };
 
 const i18n = {
@@ -81,6 +89,22 @@ const i18n = {
     textDescription: 'Use o comando "selecionar" ou "selecionar texto" para selecionar este texto',
     video: 'Vídeo',
     videoDescription: 'Use o comando "selecionar", "selecionar vídeo" ou "selecionar mídia"',
+  },
+  yue: {
+    command: 'selecionar',
+    commandHelp: 'Selecionar um',
+    element: 'element',
+    audio: 'Audio',
+    audioDescription: 'Use the command "select", "select audio" or "select media"',
+    image: 'Image',
+    imageDescription: 'Use the command "select" or "select image"',
+    link: 'Link',
+    linkDescription: 'Use the command "select" or "select link"',
+    selectLink: 'select this',
+    text: 'Text',
+    textDescription: 'Use the command "select" or "select text" to select this text',
+    video: 'Video',
+    videoDescription: 'Use the command "select", "select video" or "select media"',
   },
 };
 
@@ -196,6 +220,13 @@ export default {
         'html-example': getI18nHtmlExample('pt'),
         ...getI18nCommands('pt'),
       },
+      yue: {
+        'command.select': 'select',
+        'help.select': 'Useful to focus an element',
+        'group.select': 'Select an element',
+        'html-example': getI18nHtmlExample('yue'),
+        ...getI18nCommands('yue'),
+      },
     },
   }],
   i18n: {
@@ -210,6 +241,10 @@ export default {
     pt: {
       name: 'Selecionar',
       description: 'Este comando permite selecionar um elemento e depois executar ações relacionados ao elemento selecionado.',
+    },
+    yue: {
+      name: 'Select',
+      description: 'This module allows you to select an element and then be able to execute commands related with the selected element',
     },
   },
 };

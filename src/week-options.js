@@ -160,6 +160,26 @@ export default {
         locale: 'pt',
         format: 'MMMM YYYY, [semana] w',
       },
+      yue: {
+        name: 'Week Picker',
+        help: 'Say the number of the selected label',
+        'command.month': 'month',
+        'command.week': 'week',
+        'command.year': 'year',
+        'help.month': 'Switches to month picker',
+        'help.week': 'Switches to week picker',
+        'help.year': 'Switches to year picker',
+        'group.month': 'Switch tab',
+        'group.week': 'Switch tab',
+        'group.year': 'Switch tab',
+        'html-example': 'Use the command "click" o "click date" over the following date input then you will be able to pick a week<br/><input type="week" />',
+        month: 'month',
+        week: 'week',
+        year: 'year',
+        'say-year-number': 'Say the year number',
+        locale: 'yue',
+        format: 'MMMM YYYY, [week] w',
+      },
     },
   }],
   i18n: {
@@ -174,6 +194,10 @@ export default {
     pt: {
       name: 'Selecione uma semana',
       description: 'Após clicar no campo de inserção de data, será possível escolher a semana determinada.',
+    },
+    yue: {
+      name: 'Pick a week',
+      description: 'After click over date input it allows you select a week',
     },
   },
 };

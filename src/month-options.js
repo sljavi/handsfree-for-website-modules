@@ -147,7 +147,7 @@ export default {
         month: '月份',
         year: '年份',
         'say-year-number': '讀出年份',
-        locale: 'en',
+        locale: 'yue',
         format: 'YYYY [年] MMMM [月]',
       },
     },
