@@ -102,7 +102,7 @@ export default {
     },
     yue: {
       name: '開啟網頁',
-      description: '你可以使用這個模組開啟網頁。',
+      description: '你可以使用這個模組開啟網頁',
     },
   },
 };
