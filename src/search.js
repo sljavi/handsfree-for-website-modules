@@ -37,9 +37,9 @@ export default {
         'group.search': 'Pesquisar',
       },
       yue: {
-        'command.search': 'search',
-        'help.search': 'Search something in Google',
-        'group.search': 'Search',
+        'command.search': '搜尋',
+        'help.search': '在Google內搜尋資料',
+        'group.search': '搜尋',
       },
     },
   }, {
@@ -75,11 +75,11 @@ export default {
         exit: 'Sair',
       },
       yue: {
-        name: 'Search',
-        'help.*': 'Say the name of what you want to search',
-        group: 'Search',
-        'search-params': 'Say the name of what you want to search',
-        exit: 'Exit',
+        name: '搜尋',
+        'help.*': '讀出你想搜尋的事物',
+        group: '搜尋',
+        'search-params': '讀出你想搜尋的事物',
+        exit: '離開',
       },
     },
   }],
@@ -97,8 +97,8 @@ export default {
       description: 'Este módulo permite que pesquise facilmente algo.',
     },
     yue: {
-      name: 'Search',
-      description: 'This module allows you to easily search for something.',
+      name: '搜尋',
+      description: '你可以用這個模組輕易搜尋',
     },
   },
 };
