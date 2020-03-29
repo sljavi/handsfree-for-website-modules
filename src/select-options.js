@@ -18,8 +18,8 @@ const i18n = {
     value: 'Valor',
   },
   yue: {
-    use: 'Use the command "click" or "click select" over the following select',
-    value: 'Value',
+    use: '在以下選項利用「點擊」或「點擊選項」指令選取',
+    value: '值',
   },
 };
 
@@ -152,15 +152,15 @@ export default {
         'html-example': getHtmlExample('pt'),
       },
       yue: {
-        name: 'Select Value',
-        'command.scroll-up': 'scroll up',
-        'command.scroll-down': 'scroll down',
-        'help.scroll-up': 'Scroll up the option list',
-        'help.scroll-down': 'Scroll down the option list',
-        'help.*': 'Say the number of the selected label',
-        'select-an-option': 'Select an option',
-        'scroll-up': 'Scroll Up',
-        'scroll-down': 'Scroll Down',
+        name: '選取值',
+        'command.scroll-up': '向上滑動',
+        'command.scroll-down': '向下滑動',
+        'help.scroll-up': '在選項清單內向上滑動',
+        'help.scroll-down': '在選項清單內向下滑動',
+        'help.*': '讀出已選取標籤的總數',
+        'select-an-option': '選取項目',
+        'scroll-up': '向上滑動',
+        'scroll-down': '向下滑動',
         'html-example': getHtmlExample('yue'),
       },
     },
@@ -179,8 +179,8 @@ export default {
       description: 'Após clicar num campo de seleção é possível selecionar um valor.',
     },
     yue: {
-      name: 'Pick an option',
-      description: 'After click over a select input it allows you to select a value.',
+      name: '選取一個選項',
+      description: '點擊選單輸入後，你可選取一個值。',
     },
   },
 };
