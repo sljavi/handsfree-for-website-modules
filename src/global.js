@@ -67,6 +67,9 @@ export default {
       pt: {
         name: 'origem',
       },
+      yue: {
+        name: '根',
+      },
     },
   }],
   i18n: {

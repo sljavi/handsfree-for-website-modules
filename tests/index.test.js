@@ -1,6 +1,6 @@
 import modules from '../src/index';
 
-const langs = ['en', 'es', 'pt'];
+const langs = ['en', 'es', 'pt', 'yue'];
 
 const getModuleTranslation = (module, key, lang) => {
   if (module[key].includes('i18n-')) {

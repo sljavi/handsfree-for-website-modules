@@ -23,8 +23,10 @@ function listenForControlChanges() {
   jQuery('.speech-recognition-mode input').on('change', (ev) => {
     if (ev.target.checked) {
       handsfree.turnOnContinuesRecognition();
+      jQuery('.ctrl-key').hide();
     } else {
       handsfree.turnOffContinuesRecognition();
+      jQuery('.ctrl-key').show();
     }
   });
 }

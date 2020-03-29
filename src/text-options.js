@@ -56,7 +56,7 @@ export default {
       yue: {
         name: '文字動作',
         'command.copy': '複製',
-        'help.copy': '複製已選取的文字Copies the selected text',
+        'help.copy': '複製已選取的文字',
         'group.copy': '複製文字',
         copy: '複製',
         'html-example': '利用「選取」或「選取文字」來選取這個文字',
