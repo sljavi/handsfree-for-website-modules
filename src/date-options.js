@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import wrap from 'lodash/wrap';
 import { isDatePicker } from 'dom-element-types';
 import moment from 'moment';
 import { getNumber, getNumbersUntil } from './helpers/number-helpers';
@@ -15,15 +15,15 @@ import {
 const reviewCommandActions = {
   month: {
     condition: validateMonth,
-    action: _.wrap(setMonth, setDate),
+    action: wrap(setMonth, setDate),
   },
   day: {
     condition: validateDay,
-    action: _.wrap(setDay, setDate),
+    action: wrap(setDay, setDate),
   },
   year: {
     condition: validateYear,
-    action: _.wrap(setYear, setDate),
+    action: wrap(setYear, setDate),
   },
 };
 

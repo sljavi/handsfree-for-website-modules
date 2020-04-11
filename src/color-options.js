@@ -32,7 +32,7 @@ function reviewCommand({ contextState, selectedElement, commandName }) {
     }
     if (newState.x && newState.y) {
       newState.selectedColor = getColor(newState.x, newState.y);
-      selectedElement.seteAttribute('value', newState.selectedColor);
+      selectedElement.setAttribute('value', newState.selectedColor);
     }
     return newState;
   }

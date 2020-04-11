@@ -1,8 +1,7 @@
 {
   "name": "handsfree-for-website-modules",
-  "version": "1.3.0",
+  "version": "1.3.3",
   "description": "Voice commands modules for Handsfree for web and Handsfree for website",
-  "source": "src/index.js",
   "main": "dist/handsfree-for-website-modules.js",
   "scripts": {
     "lint": "eslint src tests",
@@ -12,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sljavi/handsfree-for-website-moduless"
+    "url": "https://github.com/sljavi/handsfree-for-website-modules"
   },
   "author": "Javier Perez",
   "license": "MIT",
