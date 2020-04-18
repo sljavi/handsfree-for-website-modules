@@ -1,14 +1,10 @@
 import openUrl from './helpers/open-url';
-import { searchSomething } from './search';
 
 function reviewCommand({ commandName }) {
-  if (commandName.includes('.')) {
-    openUrl(`http://${commandName.replace(/ /g, '')}`);
-    return {
-      commandWasExecuted: true,
-    };
-  }
-  return searchSomething({ commandName });
+  openUrl(`https://duckduckgo.com/?q=%5C${encodeURIComponent(commandName)}`);
+  return {
+    commandWasExecuted: true,
+  };
 }
 
 export default {
