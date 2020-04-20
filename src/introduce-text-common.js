@@ -3,7 +3,8 @@ import { exit as defaultExit } from './global';
 
 function updateNodeElementText(text, element) {
   if (element.matches('input') || element.matches('textarea')) {
-    element.setAttribute('value', text);
+    // eslint-disable-next-line no-param-reassign
+    element.value = text;
   } else {
     // eslint-disable-next-line no-param-reassign
     element.innerHTML = text;
