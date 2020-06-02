@@ -146,11 +146,11 @@ function pause({ selectedElement }) {
 
 function stop({ selectedElement }) {
   pause({ selectedElement });
-  selectedElement.setAttribute('currentTime', 0);
+  selectedElement.currentTime = 0;
 }
 
 function unmute({ contextState, selectedElement }) {
-  selectedElement.setAttribute('volume', contextState.unmute);
+  selectedElement.volume = contextState.unmute;
   return {};
 }
 
@@ -160,7 +160,7 @@ function mute({ selectedElement }) {
     newState = {
       unmute: selectedElement.volume,
     };
-    selectedElement.setAttribute('volume', 0);
+    selectedElement.volume = 0;
   } else {
     newState = unmute({ selectedElement });
   }
@@ -172,7 +172,7 @@ function volumeUp({ selectedElement }) {
   if (newVolume > 1) {
     newVolume = 1;
   }
-  selectedElement.setAttribute('volume', newVolume);
+  selectedElement.volume = newVolume;
 }
 
 function volumeDown({ selectedElement }) {
@@ -180,7 +180,7 @@ function volumeDown({ selectedElement }) {
   if (newVolume < 0) {
     newVolume = 0;
   }
-  selectedElement.setAttribute('volume', newVolume);
+  selectedElement.volume = newVolume;
   return {
     unmute: 0.50,
   };
@@ -191,7 +191,7 @@ function rewind(selectedElement, time = defaultLapse) {
   if (currentTime < 0) {
     currentTime = 0;
   }
-  selectedElement.setAttribute('currentTime', currentTime);
+  selectedElement.currentTime = currentTime;
 }
 
 function forward(selectedElement, time = defaultLapse) {
@@ -199,7 +199,7 @@ function forward(selectedElement, time = defaultLapse) {
   if (currentTime > selectedElement.duration) {
     currentTime = selectedElement.duration;
   }
-  selectedElement.setAttribute('currentTime', currentTime);
+  selectedElement.currentTime = currentTime;
 }
 
 function fullscreen({ selectedElement }) {

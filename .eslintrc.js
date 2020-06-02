@@ -19,6 +19,7 @@ module.exports = {
     'no-unused-vars': ['error', {'args': 'none'}],
     'no-use-before-define': ['off'],
     'consistent-return': ['off'],
-    'no-plusplus': ['off']
+    'no-plusplus': ['off'],
+    'no-param-reassign': ['off']
   }
 };
