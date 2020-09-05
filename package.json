@@ -1,6 +1,6 @@
 {
   "name": "handsfree-for-website-modules",
-  "version": "1.3.6",
+  "version": "1.4.0",
   "description": "Voice commands modules for Handsfree for web and Handsfree for website",
   "main": "dist/handsfree-for-website-modules.js",
   "scripts": {
