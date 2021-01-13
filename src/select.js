@@ -70,7 +70,7 @@ const i18n = {
     linkDescription: 'Usar comando "seleccionar" o "seleccionar vínculo"',
     selectLink: 'seleccionar este vínculo',
     text: 'Texto',
-    textDescription: 'Usar comando "seleccionar" o "seleccionar texto" para seleccionar esta linea de texto',
+    textDescription: 'Usar comando "seleccionar" o "seleccionar texto" para seleccionar esta línea de texto',
     video: 'Video',
     videoDescription: 'Usar comando "seleccionar", "seleccionar video" o "seleccionar multimedia"',
   },
