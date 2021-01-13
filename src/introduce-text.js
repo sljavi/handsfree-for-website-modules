@@ -13,7 +13,7 @@ const i18n = {
   es: {
     use: 'Usar el comando "click" o "click texto" sobre uno de los siguientes campos de texto, luego podrás escribir en él',
     singleLine: 'Campo de Texto',
-    multiLine: 'Campo de Texto Multilinea',
+    multiLine: 'Campo de Texto Multilínea',
   },
   pt: {
     use: 'Use o comando "selecionar texto" ou "clique em texto" sobre um dos seguintes textos de campo, então é possível introduzir algum texto',
@@ -198,7 +198,7 @@ export default {
         keyboard: 'Teclado',
         'hide-keyboard': 'Ocultar teclado',
         remove: 'Borrar',
-        'remove-line': 'Borrar linea',
+        'remove-line': 'Borrar línea',
         'clean-up': 'Borrar todo',
         paste: 'Pegar',
         redo: 'Deshacer',
@@ -280,7 +280,7 @@ export default {
     },
     es: {
       name: 'Introducir Texto',
-      description: 'Luego de hacer click sobre un campo de texto te permite escribir en el',
+      description: 'Luego de hacer click sobre un campo de texto te permite escribir en el mismo',
     },
     pt: {
       name: 'Introduzir Texto',
