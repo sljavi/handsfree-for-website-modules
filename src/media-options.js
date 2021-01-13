@@ -385,7 +385,7 @@ export default {
         'help.volume-down': 'Disminuir volumen',
         'group.volume-down': 'Control de volumen',
         'command.fullscreen': 'maximizar',
-        'help.fullscreen': 'Ver video en pantalla completsa',
+        'help.fullscreen': 'Ver video en pantalla completa',
         'group.fullscreen': 'Maximizar',
         'command.rewind': 'rebobinar',
         'help.rewind': 'Rebobinar 30 segundos',
