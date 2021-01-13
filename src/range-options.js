@@ -84,7 +84,7 @@ export default {
     },
     es: {
       name: 'Opciones de Rango',
-      description: 'Luego de seleccionar un rango habilita a seleccionar un valor entre el mínimo y el máximo especificado.',
+      description: 'Luego de seleccionar un rango permite seleccionar un valor entre el mínimo y el máximo especificado.',
     },
     pt: {
       name: 'Opções de Alcance',
