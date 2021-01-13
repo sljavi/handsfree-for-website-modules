@@ -43,7 +43,7 @@ export default {
         'help.copy': 'Copiar el texto seleccionado',
         'group.copy': 'Copiar texto',
         copy: 'Copiar',
-        'html-example': 'Usar comando "seleccionar" o "seleccionar texto" para seleccionar esta linea de texto',
+        'html-example': 'Usar comando "seleccionar" o "seleccionar texto" para seleccionar esta línea de texto',
       },
       pt: {
         name: 'Funções de Texto',
